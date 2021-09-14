@@ -26,7 +26,7 @@ npx cap sync
 getSources() => Promise<{ platform: string; sources?: Electron.DesktopCapturerSource[]; }>
 ```
 
-**Returns:** <code>Promise&lt;{ platform: string; sources: any[]; }&gt;</code>
+**Returns:** <code>Promise&lt;{ platform: string; sources?: Electron.DesktopCapturerSource[]; }&gt;</code>
 
 --------------------
 
