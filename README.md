@@ -23,7 +23,7 @@ npx cap sync
 ### getSources()
 
 ```typescript
-getSources() => Promise<{ platform: string; sources: any[]; }>
+getSources() => Promise<{ platform: string; sources?: Electron.DesktopCapturerSource[]; }>
 ```
 
 **Returns:** <code>Promise&lt;{ platform: string; sources: any[]; }&gt;</code>
