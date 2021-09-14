@@ -12,11 +12,11 @@ public class ScreencapturerPlugin extends Plugin {
     private Screencapturer implementation = new Screencapturer();
 
     @PluginMethod
-    public void echo(PluginCall call) {
-        String value = call.getString("value");
+    public void getSources(PluginCall call) {
+        JSObject response = new JSObject();
 
-        JSObject ret = new JSObject();
-        ret.put("value", implementation.echo(value));
-        call.resolve(ret);
+        response.put("platform", "android");
+
+        call.resolve(response);
     }
 }

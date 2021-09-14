@@ -9,10 +9,9 @@ import Capacitor
 public class ScreencapturerPlugin: CAPPlugin {
     private let implementation = Screencapturer()
 
-    @objc func echo(_ call: CAPPluginCall) {
-        let value = call.getString("value") ?? ""
+    @objc func getSources(_ call: CAPPluginCall) {
         call.resolve([
-            "value": implementation.echo(value)
+            "platform": "ios"
         ])
     }
 }

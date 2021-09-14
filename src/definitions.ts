@@ -1,3 +1,10 @@
+import type Electron from 'electron';
+
+export interface CapturerResponse {
+  platform: string;
+  sources?: Electron.DesktopCapturerSource[];
+}
+
 export interface ScreencapturerPlugin {
-  echo(options: { value: string }): Promise<{ value: string }>;
+  getSources(): Promise<CapturerResponse>;
 }

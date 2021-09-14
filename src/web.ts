@@ -1,10 +1,9 @@
 import { WebPlugin } from '@capacitor/core';
 
-import type { ScreencapturerPlugin } from './definitions';
+import type { ScreencapturerPlugin, CapturerResponse } from './definitions';
 
 export class ScreencapturerWeb extends WebPlugin implements ScreencapturerPlugin {
-  async echo(options: { value: string }): Promise<{ value: string }> {
-    console.log('ECHO', options);
-    return options;
+  async getSources(): Promise<CapturerResponse> {
+    return {platform: 'web'};
   }
 }
