@@ -14,6 +14,7 @@ npx cap sync
 <docgen-index>
 
 * [`getSources()`](#getsources)
+* [Interfaces](#interfaces)
 
 </docgen-index>
 
@@ -23,11 +24,22 @@ npx cap sync
 ### getSources()
 
 ```typescript
-getSources() => Promise<{ platform: string; sources?: Electron.DesktopCapturerSource[]; }>
+getSources() => Promise<CapturerResponse>
 ```
 
-**Returns:** <code>Promise&lt;{ platform: string; sources?: Electron.DesktopCapturerSource[]; }&gt;</code>
+**Returns:** <code>Promise&lt;<a href="#capturerresponse">CapturerResponse</a>&gt;</code>
 
 --------------------
+
+
+### Interfaces
+
+
+#### CapturerResponse
+
+| Prop           | Type                                 |
+| -------------- | ------------------------------------ |
+| **`platform`** | <code>string</code>                  |
+| **`sources`**  | <code>DesktopCapturerSource[]</code> |
 
 </docgen-api>
