@@ -1,6 +1,6 @@
 {
   "name": "capacitor-electron-screencapturer",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Capacitor wrapper for electron desktopCapturer",
   "main": "dist/plugin.cjs.js",
   "module": "dist/esm/index.js",
