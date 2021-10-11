@@ -1,8 +1,6 @@
-import type Electron from 'electron';
-
 export interface CapturerResponse {
   platform: string;
-  sources: Electron.DesktopCapturerSource[];
+  sources: string[];
 }
 
 export interface ScreencapturerPlugin {

@@ -37,9 +37,9 @@ getSources() => Promise<CapturerResponse>
 
 #### CapturerResponse
 
-| Prop           | Type                                 |
-| -------------- | ------------------------------------ |
-| **`platform`** | <code>string</code>                  |
-| **`sources`**  | <code>DesktopCapturerSource[]</code> |
+| Prop           | Type                  |
+| -------------- | --------------------- |
+| **`platform`** | <code>string</code>   |
+| **`sources`**  | <code>string[]</code> |
 
 </docgen-api>
