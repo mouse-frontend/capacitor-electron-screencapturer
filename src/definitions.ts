@@ -1,8 +1,8 @@
-export interface CapturerResponse {
-  platform: string;
-  sources: string[];
+export interface IScreencapturerSource {
+  id: string;
+  name: string;
 }
 
 export interface ScreencapturerPlugin {
-  getSources(): Promise<CapturerResponse>;
+  getSources(): Promise<IScreencapturerSource[]>;
 }

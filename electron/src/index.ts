@@ -1,11 +1,16 @@
 import { desktopCapturer } from 'electron';
 
-import type { ScreencapturerPlugin, CapturerResponse } from '../../src';
+import type { ScreencapturerPlugin, IScreencapturerSource } from '../../src';
 
 export class Screencapturer implements ScreencapturerPlugin {
-  async getSources(): Promise<CapturerResponse> {
-    const sources = (await desktopCapturer.getSources({ types: ['window', 'screen'] })).map(({id}) => id);
+  async getSources(): Promise<IScreencapturerSource[]> {
+    const sources = await desktopCapturer.getSources({ types: ['window', 'screen'] });
 
-    return { platform: 'electron', sources };
+    return sources.map(({id, name}) => {
+      return {
+        id,
+        name,
+      }
+    });
   }
 }
